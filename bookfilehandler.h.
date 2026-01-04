@@ -1,0 +1,33 @@
+
+#ifndef BOOKFILEHANDLER_H
+#define BOOKFILEHANDLER_H
+
+#include <string>
+using namespace std;
+
+struct Book {
+    int id;
+    string title;
+    string author;
+    int price;
+    Book* left;
+    Book* right;
+};
+
+class BookFileHandler {
+private:
+    Book* root; // BST root
+    Book* insertBST(Book* node, Book* newBook);
+    Book* searchByID(Book* node, int id);
+    Book* searchByTitle(Book* node, string title);
+
+public:
+    BookFileHandler(); // constructor
+    void loadBooks();       // load from file to BST
+    void saveBooks();       // save BST to file
+    Book* searchByID(int id);       // search by ID
+    Book* searchByTitle(string title); // search by title
+};
+
+#endif
+
