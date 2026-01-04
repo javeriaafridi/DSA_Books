@@ -1,0 +1,20 @@
+101,The Alchemist,Paulo Coelho,200
+102,Harry Potter,J.K. Rowling,300
+103,1984,George Orwell,150
+104,To Kill a Mockingbird,Harper Lee,250
+105,The Great Gatsby,F. Scott Fitzgerald,180
+106,The Catcher in the Rye,J.D. Salinger,220
+107,Pride and Prejudice,Jane Austen,200
+108,The Hobbit,J.R.R. Tolkien,280
+109,The Lord of the Rings,J.R.R. Tolkien,450
+110,The Da Vinci Code,Dan Brown,350
+111,The Kite Runner,Khaled Hosseini,270
+112,Life of Pi,Yann Martel,240
+113,The Hunger Games,Suzanne Collins,300
+114,The Chronicles of Narnia,C.S. Lewis,330
+115,Moby Dick,Herman Melville,210
+116,Jane Eyre,Charlotte Bronte,190
+117,Wuthering Heights,Emily Bronte,200
+118,Animal Farm,George Orwell,150
+119,The Little Prince,Antoine de Saint-Exupéry,160
+120,Brave New World,Aldous Huxley,170
