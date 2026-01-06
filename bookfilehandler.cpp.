@@ -3,6 +3,54 @@
 #include <fstream>
 #include <sstream>
 using namespace std;
+void loadBooksFromFile(Node*& root);
+void saveBooksToFile(Node* root);
+void loadBooksFromFile(Node*& root) {
+    ifstream file("books.txt");
+
+    if (!file.is_open()) {
+        cout << "No book file found. Starting empty.\n";
+        return;
+    }
+void saveInOrder(Node* root, ofstream& file) {
+    if (root == nullptr) return;
+
+    saveInOrder(root->left, file);
+    file << root->title << "," << root->author << "," << root->id << endl;
+    saveInOrder(root->right, file);
+}
+
+void saveBooksToFile(Node* root) {
+    ofstream file("books.txt");
+    if (!file.is_open()) return;
+
+    saveInOrder(root, file);
+    file.close();
+}
+
+
+    string line;
+    while (getline(file, line)) {
+        string title, author;
+        int id;
+
+        stringstream ss(line);
+        getline(ss, title, ',');
+        getline(ss, author, ',');
+        ss >> id;
+
+        // Duplicate Book ID check
+        if (searchByBookID(root, id) != nullptr) {
+            continue;
+        }
+
+        // Use BST insert (DO NOT MODIFY BST)
+        root = insertBST(root, title, author, id);
+    }
+
+    file.close();
+}
+
 
 // Constructor
 BookFileHandler::BookFileHandler() {
@@ -98,3 +146,4 @@ Book* BookFileHandler::searchByTitle(Book* node, string title) {
 Book* BookFileHandler::searchByTitle(string title) {
     return searchByTitle(root, title);
 }
+
